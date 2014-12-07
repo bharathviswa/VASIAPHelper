@@ -18,7 +18,7 @@ In your buy class implement this:
 }
 
 2. Init list products in array
-
+=========
         _products = nil;
         [[IVRageIAPHelper sharedInstance] requestProductWithCompletionHandler:^(BOOL success, NSArray *products) {
                 
