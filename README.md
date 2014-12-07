@@ -31,6 +31,7 @@ In your buy class implement this:
         
 3. Buy product:
 
+============
     SKProduct* product = _products[productOne]; // get product with index, that we need;
     NSLog(@"Product: %@", product.productIdentifier);
     [[IVRageIAPHelper sharedInstance] buyProduct:product];
