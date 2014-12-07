@@ -21,8 +21,6 @@ In your buy class implement this:
 
 @end
 
-=======================================================================================================
-
 - (instancetype)init
 {
     self = [super init];
@@ -43,8 +41,7 @@ In your buy class implement this:
     return self;
 }
 
-=======================================================================================================
-    
+
 Buy product:
 
     SKProduct* product = _products[productOne]; // get product with index, that we need;
