@@ -13,14 +13,15 @@ Little lib that help you to implement In-App Purchases in your apps!
 
 In your buy class implement this:
 
+=================
 
 @interface ViewController ()
 {
     NSArray* _products;
 }
-
+====================
 @end
-
+==========================
 - (instancetype)init
 {
     self = [super init];
