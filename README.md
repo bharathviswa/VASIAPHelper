@@ -13,19 +13,12 @@ Little lib that help you to implement In-App Purchases in your apps!
 
 In your buy class implement this:
 
-=================
-@interface ViewController ()
-{
+1. @interface ViewController () {
     NSArray* _products;
 }
 
-@end
-==========================
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
+2. Init list products in array
+
         _products = nil;
         [[IVRageIAPHelper sharedInstance] requestProductWithCompletionHandler:^(BOOL success, NSArray *products) {
                 
@@ -35,14 +28,8 @@ In your buy class implement this:
         }
             
         }];
-            
-}
-    
-    return self;
-}
-=========================
-
-Buy product:
+        
+3. Buy product:
 
     SKProduct* product = _products[productOne]; // get product with index, that we need;
     NSLog(@"Product: %@", product.productIdentifier);
