@@ -1,9 +1,8 @@
-IVIAPHelper
-=======================================================================================================
+# IVIAPHelper
 
 Little lib that help you to implement In-App Purchases in your apps!
 
-====================  How use ==================
+### How to use:
 
 1. Create In-App Purchase product ID in your account iTunes Connect
 2. Drag library IVIAPHelper in your project
@@ -13,14 +12,14 @@ Little lib that help you to implement In-App Purchases in your apps!
 
 In your buy class implement this:
 
-1. Add array in @interface
-=========
+1. Add array in @interface:
+```
 @interface ViewController () {
     NSArray* _products;
 }
-
+```
 2. Init list products in array
-=========
+```
         _products = nil;
         [[IVRageIAPHelper sharedInstance] requestProductWithCompletionHandler:^(BOOL success, NSArray *products) {
                 
@@ -30,9 +29,10 @@ In your buy class implement this:
         }
             
         }];
-        
+```
 3. Buy product:
-============
+```
     SKProduct* product = _products[productOne]; // get product with index, that we need;
     NSLog(@"Product: %@", product.productIdentifier);
     [[IVRageIAPHelper sharedInstance] buyProduct:product];
+```
